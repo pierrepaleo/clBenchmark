@@ -18,7 +18,7 @@
 #include "graphics.h"
 
 // Utilities, OpenCL and system includes
-#include "oclUtils.h"
+#include <oclUtils.h>
 //#include <shrQATest.h>
 
 // defines

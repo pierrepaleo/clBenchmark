@@ -16,10 +16,10 @@ OPENCL_INCLUDE=-Invidia/inc/
 # =========
 
 GPU_UTILS_LIB=\
-	/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/shared/obj/x86_64/release/shrUtils.cpp.o \
-	/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/shared/obj/x86_64/release/cmd_arg_reader.cpp.o \
-	/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/shared/obj/x86_64/release/rendercheckGL.cpp.o \
-	/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/OpenCL/common/lib/liboclUtil_x86_64.a
+	#/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/shared/obj/x86_64/release/shrUtils.cpp.o \
+	#/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/shared/obj/x86_64/release/cmd_arg_reader.cpp.o \
+	#/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/shared/obj/x86_64/release/rendercheckGL.cpp.o \
+	#/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/OpenCL/common/lib/liboclUtil_x86_64.a
 	#/Developer/GPU\ Computing/shared/obj/x86_64/release/shrUtils.cpp.o \
 	#/Developer/GPU\ Computing/shared/obj/x86_64/release/cmd_arg_reader.cpp.o \
 	#/Developer/GPU\ Computing/shared/obj/x86_64/release/rendercheckGL.cpp.o \
@@ -69,12 +69,10 @@ OBJ=					\
 	benchmark.o			\
 	batch_test.o			\
 	FreeType.o			\
-	#added
-	multithreading.o		\
+	multithreading.o			\
 	shrUtils.o			\
-	cmd_arg_reader.o		\
+	cmd_arg_reader.o			\
 	rendercheckGL.o			\
-	#endof added
 	main.o
 
 # Header files
@@ -89,13 +87,11 @@ HEADER=					\
 	benchmark.h			\
 	batch_test.h			\
 	common.h				\
-	#added
 	cmd_arg_reader.h		\
 	exception.h			\
 	multithreading.h		\
 	rendercheckGL.h			\
 	shrUtils.h			\
-	#endof added	
 	FreeType.h
 
 TARGET=benchmark

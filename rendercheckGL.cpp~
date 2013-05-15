@@ -26,7 +26,7 @@
 
 #include <shrUtils.h>
 #include "rendercheckGL.h"
-#include "nvShaderUtils.h"
+#include <nvShaderUtils.h>
 
 // CheckRender::Base class for CheckRender (there will be default functions all classes derived from this)
 CheckRender::CheckRender(unsigned int width, unsigned int height, unsigned int Bpp,

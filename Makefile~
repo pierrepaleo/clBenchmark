@@ -69,10 +69,9 @@ OBJ=					\
 	benchmark.o			\
 	batch_test.o			\
 	FreeType.o			\
-	#added
-	multithreading.o		\
+	multithreading.o			\
 	shrUtils.o			\
-	cmd_arg_reader.o		\
+	cmd_arg_reader.o			\
 	rendercheckGL.o			\
 	main.o
 
@@ -88,13 +87,11 @@ HEADER=					\
 	benchmark.h			\
 	batch_test.h			\
 	common.h				\
-	#added
 	cmd_arg_reader.h		\
 	exception.h			\
 	multithreading.h		\
 	rendercheckGL.h			\
 	shrUtils.h			\
-	#endof added	
 	FreeType.h
 
 TARGET=benchmark
