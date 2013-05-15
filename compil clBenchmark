@@ -1,0 +1,39 @@
+dans le make :
+ligne 13 : modifié pour qu'il trouve les librairies... dans l'idéal il faudrait tout copier dans /usr/include
+
+modifié les lignes 18 à 21 pour GPU_UTILS_LIB
+
+ensuite (après le else) modifié les 
+#SDL_INCLUDE+= -I/home/evl/kreda/devlib/include
+#SDL_LIB+= -lGLU /home/evl/kreda/devlib/lib/libSDL_image.a /home/evl/kreda/devlib/lib/libGLEW.a
+
+Pour l'instant il ne veut pas build à cause des fonctions de openCL, pourtant il est inclus...
+
+
+
+
+
+dans ocl.h :
+commenté ligne 22 : a-t-on besoin de shrQATest.h ? Si oui, il n'est pas sur le disque...
+
+dans ocl.cpp : commenté la ligne 83 (shrQAStart) et les lignes 178-179 (Win32 donc pas important)
+
+
+
+
+ROUND 2 :
+
+mettre
+#include <CL/cl.h> //opencl [ADDED]
+#include <CL/opencl.h>
+dans ocl.h
+
+
+FINALEMEMT :
+
+il fallait inclure la bibli opencl... in fine, la commande a taper etait
+
+g++ -g graphics.o timer.o texture_unit.o vector_math.o misc.o common.o vis.o ocl.o benchmark.o batch_test.o FreeType.o multithreading.o shrUtils.o cmd_arg_reader.o rendercheckGL.o oclUtils.o main.o -lSDL -ljpeg -lpng -ltiff -lGLU -lGLEW -lfreetype -lz -lOpenCL -lSDL_image -o benchmark
+
+
+NB : faire clinfo | less

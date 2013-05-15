@@ -24,7 +24,7 @@
 // Copyright (c) NVIDIA Corporation. All rights reserved.
 ////////////////////////////////////////////////////////////////////////////////
 
-#include <shrUtils.h>
+#include "shrUtils.h"
 #include "rendercheckGL.h"
 #include "nvShaderUtils.h"
 

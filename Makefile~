@@ -11,15 +11,16 @@ ARCH=$(shell uname -p)
 # =========
 SDL_INCLUDE=$(shell sdl-config --cflags)
 #OPENCL_INCLUDE=-I/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/OpenCL/common/inc/ -I /home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/shared/inc/
-OPENCL_INCLUDE=-Invidia/inc/
+#OPENCL_INCLUDE=-Invidia/inc/
+OPENCL_INCLUDE=-I/usr/include/CL/
 # Libs
 # =========
 
 GPU_UTILS_LIB=\
-	/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/shared/obj/x86_64/release/shrUtils.cpp.o \
-	/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/shared/obj/x86_64/release/cmd_arg_reader.cpp.o \
-	/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/shared/obj/x86_64/release/rendercheckGL.cpp.o \
-	/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/OpenCL/common/lib/liboclUtil_x86_64.a
+	#/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/shared/obj/x86_64/release/shrUtils.cpp.o \
+	#/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/shared/obj/x86_64/release/cmd_arg_reader.cpp.o \
+	#/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/shared/obj/x86_64/release/rendercheckGL.cpp.o \
+	#/home/karkouli/fromRnice/NVIDIA_GPU_Computing_SDK/OpenCL/common/lib/liboclUtil_x86_64.a
 	#/Developer/GPU\ Computing/shared/obj/x86_64/release/shrUtils.cpp.o \
 	#/Developer/GPU\ Computing/shared/obj/x86_64/release/cmd_arg_reader.cpp.o \
 	#/Developer/GPU\ Computing/shared/obj/x86_64/release/rendercheckGL.cpp.o \
@@ -73,6 +74,7 @@ OBJ=					\
 	shrUtils.o			\
 	cmd_arg_reader.o			\
 	rendercheckGL.o			\
+	oclUtils.o			\
 	main.o
 
 # Header files
@@ -91,6 +93,7 @@ HEADER=					\
 	exception.h			\
 	multithreading.h		\
 	rendercheckGL.h			\
+	oclUtils.h			\
 	shrUtils.h			\
 	FreeType.h
 

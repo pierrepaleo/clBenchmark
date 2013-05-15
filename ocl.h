@@ -20,6 +20,10 @@
 // Utilities, OpenCL and system includes
 #include "oclUtils.h"
 //#include <shrQATest.h>
+#include <CL/cl.h> //opencl [ADDED]
+//#include <CL/cl.hpp>
+#include <CL/opencl.h>
+
 
 // defines
 #if defined (__APPLE__) || defined(MACOSX)

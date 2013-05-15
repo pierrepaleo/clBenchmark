@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <string>
 #include "ocl.h"
-#include "oclUtils.h"
 #include <CL/cl.h> //opencl [ADDED]
 //#include <CL/cl.hpp>
 //#include <CL/opencl.h>
